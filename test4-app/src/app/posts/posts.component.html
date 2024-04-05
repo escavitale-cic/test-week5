@@ -1,0 +1,28 @@
+<section class="my-5">
+  <div class="container overflow-hidden">
+    <div>
+      <h1>Last Viewed Post ID: {{ lastViewed$ }}</h1>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+      <div class="col mb-4" *ngFor="let post of posts">
+        <mat-card class="h-100 shadow border-0">
+          <mat-card-header>
+            <mat-card-title>
+              <p class="post-title fw-bold">{{ post.title }}</p>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="card-text post-body">{{ post.body }}</p>
+            <a
+              mat-flat-button
+              color="primary"
+              [routerLink]="['/post-detail', post.id]"
+             (click) = "onPostClick(post)"
+              >View Details</a
+            >
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>
