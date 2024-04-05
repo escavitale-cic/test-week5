@@ -1,0 +1,17 @@
+<section class="my-5 animate-element">
+  <div class="container overflow-hidden">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+      <div class="col mb-4" *ngFor="let post of posts">
+        <mat-card class="h-100 shadow border-0">
+          <mat-card-content>
+            <p class="card-title post-title fw-bold">{{ post.title }}</p>
+            <p class="card-text post-body">{{ post.body }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-raised-button  [routerLink]="['/post-detail', post.id] " style="background-color: #ad2a37; color: white;">View Details</a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>

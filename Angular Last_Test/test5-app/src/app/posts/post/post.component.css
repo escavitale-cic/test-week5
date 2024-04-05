@@ -1,0 +1,23 @@
+.post-title{
+    font-size: 1.25rem;
+}
+
+.post-body{
+    font-size: 1rem;
+}
+
+@keyframes easeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+
+        opacity: 1;
+    }
+}
+
+.animate-element {
+    animation: easeIn 1s ease-in-out;
+   
+}
+
