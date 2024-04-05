@@ -1,0 +1,12 @@
+
+<section class="my-5 animate-element" *ngIf="selectedPost">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="fw-bold">{{selectedPost.title}}</h2>
+                <p>{{selectedPost.body}}</p>
+                <a mat-raised-button routerLink="" style="background-color: #ad2a37; color: white;">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</section>
